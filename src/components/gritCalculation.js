@@ -35,7 +35,7 @@ export default function gritCalculation(knifeStyle, metalType) {
 
   let stoneGrits = [];
   stoneGrits.push(minGrit * 100);
-  stoneGrits.push(Math.floor((maxGrit - minGrit) / 2) * 100);
+  stoneGrits.push(Math.floor((maxGrit - minGrit) / 2) * 100); // Multiplying by 100 now to keep everything rounded
   stoneGrits.push(maxGrit * 100);
 
   console.log(`Inside gritCalc ${stoneGrits}`);

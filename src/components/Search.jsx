@@ -1,11 +1,6 @@
 import SearchResults from "./SearchResults";
 import { useState, useEffect } from "react";
 
-/*
-  Knife Styles: Chef Knife, Butcher Knife, Slicing Knife
-  Metal Type: High Carbon, High Chromium, Stainless Steel
-*/
-
 const Search = () => {
   const [searchRequest, setSearchRequest] = useState({
     knifeStyle: "",
@@ -27,7 +22,7 @@ const Search = () => {
   };
 
   useEffect(() => {
-    console.log(searchRequest);
+    console.log(searchRequest); // Just checking
   });
 
   return (

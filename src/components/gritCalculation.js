@@ -1,4 +1,8 @@
-export default function gritCalculation(knifeStyle, metalType) {
+export default function gritCalculation(
+  knifeStyle,
+  metalType,
+  currentSharpness
+) {
   let maxGrit = 0;
   let minGrit = 0;
 
@@ -33,10 +37,34 @@ export default function gritCalculation(knifeStyle, metalType) {
       break;
   }
 
+  switch (currentSharpness) {
+    case "Very Dull":
+      minGrit += 0;
+      break;
+
+    case "Dull":
+      minGrit = minGrit + minGrit / 2;
+      break;
+
+    case "Almost Sharp":
+      minGrit = minGrit + minGrit;
+      break;
+  }
+
   let stoneGrits = [];
-  stoneGrits.push(minGrit * 1000);
-  stoneGrits.push(Math.floor((maxGrit + minGrit) / 2) * 1000); // Multiplying by 1000 now to keep everything rounded
-  stoneGrits.push(maxGrit * 1000);
+
+  // Multiplying by 1000 to get the grit
+  // .toFixed(1) to round off the 1 decimal place. Math.round to achieve similar results.
+
+  let minimum = parseFloat(minGrit.toFixed(1));
+  let maximum = parseFloat(maxGrit.toFixed(1));
+  console.log(minimum);
+  console.log(maximum);
+  console.log(Math.floor(minimum + maximum) / 2);
+
+  stoneGrits.push(minimum * 1000);
+  stoneGrits.push((Math.round(minimum + maximum) / 2) * 1000);
+  stoneGrits.push(maximum * 1000);
 
   console.log(stoneGrits);
   return stoneGrits;

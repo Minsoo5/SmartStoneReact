@@ -1,8 +1,13 @@
 import gritCalculation from "./gritCalculation";
 import angleCalculation from "./angleCalculation";
 
-export default function SearchResults({ knifeStyle, metalType, singleBevel }) {
-  let stones = gritCalculation(knifeStyle, metalType);
+export default function SearchResults({
+  knifeStyle,
+  metalType,
+  singleBevel,
+  currentSharpness,
+}) {
+  let stones = gritCalculation(knifeStyle, metalType, currentSharpness);
   let angle = angleCalculation(knifeStyle, metalType, singleBevel);
   return stones[0] != 0 ? (
     <div>

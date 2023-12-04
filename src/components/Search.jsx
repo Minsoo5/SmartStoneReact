@@ -28,8 +28,11 @@ const Search = () => {
     <div>
       <h1>Reactive Smart Stone</h1>
       <h2>
-        Current State: {searchRequest.knifeStyle} {searchRequest.metalType}{" "}
-        {searchRequest.singleBevel}{" "}
+        Current Knife:{" "}
+        {searchRequest.singleBevel === "Yes"
+          ? "Single edged "
+          : "Double edged "}
+        {searchRequest.knifeStyle} made with {searchRequest.metalType} steel
       </h2>
       <form onSubmit={handleSubmit} className="searchForm">
         <label htmlFor="knifeStyle">

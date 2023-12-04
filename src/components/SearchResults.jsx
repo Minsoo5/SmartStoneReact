@@ -12,11 +12,11 @@ export default function SearchResults({ knifeStyle, metalType, singleBevel }) {
         {angleCalculation(knifeStyle, metalType, singleBevel) + 1} degrees
       </h3>
       <h3>{singleBevel === "Yes" ? "On one side" : "On both sides"}</h3>
-      <ol>
+      <ul>
         {stones.map((stone) => (
-          <li>Stone with Grit Level: {stone}</li>
+          <li>Grit Level: {stone}</li>
         ))}
-      </ol>
+      </ul>
     </div>
   ) : null;
 }

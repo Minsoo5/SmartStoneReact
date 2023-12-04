@@ -43,6 +43,11 @@ select {
   margin: 3px;
 }
 
+ul {
+  orientation: auto;
+  padding: 0;
+}
+
 li {
   margin: 0.25rem;
   display: grid;

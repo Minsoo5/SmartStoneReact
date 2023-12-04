@@ -21,7 +21,7 @@ const Search = () => {
   };
 
   useEffect(() => {
-    console.log(searchRequest); // Just checking
+    console.log(searchRequest); // Just checking, will trigger after each component render
   });
 
   return (

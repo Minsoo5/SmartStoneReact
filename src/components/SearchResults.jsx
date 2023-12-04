@@ -1,6 +1,6 @@
 import gritCalculation from "./gritCalculation";
 
-export default function SearchResults({ knifeStyle, metalType, singleBevel }) {
+export default function SearchResults({ knifeStyle, metalType }) {
   let stones = gritCalculation(knifeStyle, metalType);
   return stones[0] != 0 ? (
     <div>

@@ -36,13 +36,16 @@ h1 {
 }
 
 label {
-  margin-left: 6px;
-  margin-right: 6px;
+  margin: 6px;
 }
 
 select {
-  margin-left: 2px;
-  margin-right: 2px;
+  margin: 3px;
+}
+
+li {
+  margin: 0.25rem;
+  display: grid;
 }
 
 button {

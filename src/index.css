@@ -35,6 +35,16 @@ h1 {
   line-height: 1.1;
 }
 
+label {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+select {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -45,6 +55,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin-left: 6px;
 }
 button:hover {
   border-color: #646cff;

@@ -17,7 +17,6 @@ const Search = () => {
       singleBevel: formData.get("singleBevel") ?? "",
     };
     setSearchRequest(obj);
-    console.log(searchRequest);
     // Perform clean up and a fetch?
   };
 
@@ -32,7 +31,7 @@ const Search = () => {
         Current State: {searchRequest.knifeStyle} {searchRequest.metalType}{" "}
         {searchRequest.singleBevel}{" "}
       </h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="searchForm">
         <label htmlFor="knifeStyle">
           Knife Style
           <select id="knifeStyle" name="knifeStyle">
@@ -61,7 +60,8 @@ const Search = () => {
             <option key="No">No</option>
           </select>
         </label>
-
+        <br></br>
+        <br></br>
         <button>Submit</button>
       </form>
       {console.log("searchRequest: ", searchRequest)}

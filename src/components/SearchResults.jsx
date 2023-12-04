@@ -5,7 +5,7 @@ export default function SearchResults({ knifeStyle, metalType, singleBevel }) {
   console.log(knifeStyle);
   let stones = gritCalculation(knifeStyle, metalType);
   console.log(stones);
-  return stones[1] != 0 ? (
+  return stones[0] != 0 ? (
     <div>
       <h3>Use these stones in order:</h3>
       <ol>

@@ -26,7 +26,7 @@ export default function angleCalculation(knifeStyle, metalType, singleBevel) {
       break;
 
     case "Damascus":
-      angle += 1.5;
+      angle -= 1.5;
       break;
   }
 

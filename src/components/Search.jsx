@@ -10,6 +10,9 @@ const Search = () => {
     currentSharpness: "",
   });
 
+  const { knifeStyle, metalType, singleBevel, currentSharpness } =
+    searchRequest;
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -74,19 +77,9 @@ const Search = () => {
         <button>Submit</button>
       </form>
 
-      <CurrentKnife
-        knifeStyle={searchRequest.knifeStyle}
-        metalType={searchRequest.metalType}
-        singleBevel={searchRequest.singleBevel}
-        currentSharpness={searchRequest.currentSharpness}
-      />
+      <CurrentKnife searchRequest={searchRequest} />
 
-      <SearchResults
-        knifeStyle={searchRequest.knifeStyle}
-        metalType={searchRequest.metalType}
-        singleBevel={searchRequest.singleBevel}
-        currentSharpness={searchRequest.currentSharpness}
-      />
+      <SearchResults searchRequest={searchRequest} />
     </div>
   );
 };

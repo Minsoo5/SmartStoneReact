@@ -1,8 +1,5 @@
 const CurrentKnife = ({
-  knifeStyle,
-  metalType,
-  singleBevel,
-  currentSharpness,
+  searchRequest: { knifeStyle, metalType, singleBevel, currentSharpness },
 }) => {
   return (
     <h2>
@@ -16,7 +13,7 @@ const CurrentKnife = ({
       {singleBevel !== "" && singleBevel === "Yes"
         ? "Single Edged "
         : singleBevel === "No"
-        ? "Double Edged"
+        ? "Double Edged "
         : null}
       {metalType !== "" && metalType === "High Carbon"
         ? "High Carbon "

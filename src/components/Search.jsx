@@ -75,6 +75,19 @@ const Search = () => {
         <br></br>
         <br></br>
         <button>Submit</button>
+        <button
+          type="reset"
+          onClick={() => {
+            setSearchRequest({
+              knifeStyle: "",
+              metalType: "",
+              singleBevel: "",
+              currentSharpness: "",
+            });
+          }}
+        >
+          Reset
+        </button>
       </form>
 
       <CurrentKnife searchRequest={searchRequest} />

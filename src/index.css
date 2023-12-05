@@ -73,7 +73,8 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.searchForm {
+.footer > a > img {
+  margin-right: 15px;
 }
 
 @media (prefers-color-scheme: light) {

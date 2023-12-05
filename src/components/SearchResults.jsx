@@ -9,7 +9,7 @@ export default function SearchResults({
   let stones = gritCalculation(knifeStyle, metalType, currentSharpness);
   let angle = angleCalculation(knifeStyle, metalType, singleBevel);
   return stones[0] != 0 ? (
-    <div>
+    <div className="instructions">
       <h3>
         Stones to use with an angle of {angle - 1} - {angle + 1} degrees
       </h3>

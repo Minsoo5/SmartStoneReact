@@ -76,10 +76,27 @@ const Search = () => {
       <h2>
         Current Knife:
         <br></br>
-        {searchRequest.singleBevel === "Yes"
-          ? "Single edged "
-          : "Double edged "}
-        {searchRequest.knifeStyle} made with {searchRequest.metalType} steel
+        {searchRequest.singleBevel !== "" && searchRequest.singleBevel === "Yes"
+          ? "Single Edged "
+          : searchRequest.singleBevel === "No"
+          ? "Double Edged"
+          : null}
+        {searchRequest.metalType !== "" &&
+        searchRequest.metalType === "High Carbon"
+          ? "High Carbon "
+          : searchRequest.metalType === "Stainless Steel"
+          ? "Stainless Steel "
+          : searchRequest.metalType === "Damascus"
+          ? "Damascus "
+          : null}
+        {searchRequest.knifeStyle !== "" &&
+        searchRequest.knifeStyle === "Chef Knife"
+          ? "Chef Knife"
+          : searchRequest.knifeStyle === "Butcher Knife"
+          ? "Butcher Knife"
+          : searchRequest.knifeStyle === "Slicing Knife"
+          ? "Slicing Knife"
+          : null}
       </h2>
       {console.log("searchRequest: ", searchRequest)}
       <SearchResults

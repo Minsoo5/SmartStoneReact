@@ -6,7 +6,12 @@ const CurrentKnife = ({
 }) => {
   return (
     <h2>
-      Current Knife:
+      {knifeStyle !== "" ||
+      metalType !== "" ||
+      singleBevel !== "" ||
+      currentSharpness !== ""
+        ? "Current Knife: "
+        : null}
       <br></br>
       {singleBevel !== "" && singleBevel === "Yes"
         ? "Single Edged "

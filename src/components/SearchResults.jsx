@@ -22,7 +22,16 @@ export default function SearchResults({
       </h3>
       <ul>
         {stones.map((stone) => (
-          <li key={stones.indexOf(stone)}>Grit Level: {stone}</li> // Place holder key for the eslint error.
+          <li key={stones.indexOf(stone)}>
+            Grit Level:{" "}
+            <a
+              href={`https://www.amazon.com/s?k=sharpening+stone+grit+${stone}&ref=nb_sb_noss`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {stone}
+            </a>
+          </li> // Place holder key for the eslint error.
         ))}
       </ul>
       <h3>

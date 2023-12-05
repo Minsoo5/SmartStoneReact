@@ -58,14 +58,10 @@ export default function gritCalculation(
 
   let minimum = parseFloat(minGrit.toFixed(1));
   let maximum = parseFloat(maxGrit.toFixed(1));
-  console.log(minimum);
-  console.log(maximum);
-  console.log(Math.floor(minimum + maximum) / 2);
 
   stoneGrits.push(minimum * 1000);
   stoneGrits.push((Math.round(minimum + maximum) / 2) * 1000);
   stoneGrits.push(maximum * 1000);
 
-  console.log(stoneGrits);
   return stoneGrits;
 }

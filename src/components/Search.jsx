@@ -1,3 +1,4 @@
+import CurrentKnife from "./CurrentKnife";
 import SearchResults from "./SearchResults";
 import { useState, useEffect } from "react";
 
@@ -68,37 +69,18 @@ const Search = () => {
             <option key="Almost Sharp">Almost Sharp</option>
           </select>
         </label>
-
         <br></br>
         <br></br>
         <button>Submit</button>
       </form>
-      <h2>
-        Current Knife:
-        <br></br>
-        {searchRequest.singleBevel !== "" && searchRequest.singleBevel === "Yes"
-          ? "Single Edged "
-          : searchRequest.singleBevel === "No"
-          ? "Double Edged"
-          : null}
-        {searchRequest.metalType !== "" &&
-        searchRequest.metalType === "High Carbon"
-          ? "High Carbon "
-          : searchRequest.metalType === "Stainless Steel"
-          ? "Stainless Steel "
-          : searchRequest.metalType === "Damascus"
-          ? "Damascus "
-          : null}
-        {searchRequest.knifeStyle !== "" &&
-        searchRequest.knifeStyle === "Chef Knife"
-          ? "Chef Knife"
-          : searchRequest.knifeStyle === "Butcher Knife"
-          ? "Butcher Knife"
-          : searchRequest.knifeStyle === "Slicing Knife"
-          ? "Slicing Knife"
-          : null}
-      </h2>
-      {console.log("searchRequest: ", searchRequest)}
+
+      <CurrentKnife
+        knifeStyle={searchRequest.knifeStyle}
+        metalType={searchRequest.metalType}
+        singleBevel={searchRequest.singleBevel}
+        currentSharpness={searchRequest.currentSharpness}
+      />
+
       <SearchResults
         knifeStyle={searchRequest.knifeStyle}
         metalType={searchRequest.metalType}

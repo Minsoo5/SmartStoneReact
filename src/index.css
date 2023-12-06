@@ -13,6 +13,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+select {
+  border-radius: 10px;
+  height: 20px;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -51,6 +56,8 @@ ul {
 
 li {
   orientation: auto;
+  font-size: large;
+  font-weight: bold;
   margin: 0.25rem;
   display: grid;
 }

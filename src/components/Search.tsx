@@ -1,9 +1,10 @@
 import CurrentKnife from "./CurrentKnife";
 import SearchResults from "./SearchResults";
 import { useState, useEffect, SyntheticEvent } from "react";
+import { knifeObject } from "./objectTypes";
 
 const Search = () => {
-  const [searchRequest, setSearchRequest] = useState({
+  const [searchRequest, setSearchRequest] = useState<knifeObject>({
     knifeStyle: "",
     metalType: "",
     singleBevel: "",
@@ -17,12 +18,7 @@ const Search = () => {
     e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
 
-    const obj: {
-      knifeStyle: string;
-      metalType: string;
-      singleBevel: string;
-      currentSharpness: string;
-    } = {
+    const obj: knifeObject = {
       knifeStyle: (formData.get("knifeStyle") as string) ?? "",
       metalType: (formData.get("metalType") as string) ?? "",
       singleBevel: (formData.get("singleBevel") as string) ?? "",
@@ -97,7 +93,7 @@ const Search = () => {
         </button>
       </form>
 
-      <CurrentKnife searchRequest={searchRequest} />
+      <CurrentKnife {...searchRequest} />
 
       <SearchResults searchRequest={searchRequest} />
     </div>

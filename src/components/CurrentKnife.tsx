@@ -1,36 +1,34 @@
 import { knifeObject } from "./objectTypes";
 
-const CurrentKnife = ({
-  searchRequest: { knifeStyle, metalType, singleBevel, currentSharpness },
-}: {
-  searchRequest: knifeObject;
-}) => {
+const CurrentKnife = (props: knifeObject) => {
+  console.log(props);
+  console.log(props.knifeStyle);
   return (
     <h2>
-      {knifeStyle !== "" ||
-      metalType !== "" ||
-      singleBevel !== "" ||
-      currentSharpness !== ""
+      {props.knifeStyle !== "" ||
+      props.metalType !== "" ||
+      props.singleBevel !== "" ||
+      props.currentSharpness !== ""
         ? "Current Knife: "
         : null}
       <br></br>
-      {singleBevel !== "" && singleBevel === "Yes"
+      {props.singleBevel !== "" && props.singleBevel === "Yes"
         ? "Single Edged "
-        : singleBevel === "No"
+        : props.singleBevel === "No"
         ? "Double Edged "
         : null}
-      {metalType !== "" && metalType === "High Carbon"
+      {props.metalType !== "" && props.metalType === "High Carbon"
         ? "High Carbon "
-        : metalType === "Stainless Steel"
+        : props.metalType === "Stainless Steel"
         ? "Stainless Steel "
-        : metalType === "Damascus"
+        : props.metalType === "Damascus"
         ? "Damascus "
         : null}
-      {knifeStyle !== "" && knifeStyle === "Chef Knife"
+      {props.knifeStyle !== "" && props.knifeStyle === "Chef Knife"
         ? "Chef Knife"
-        : knifeStyle === "Butcher Knife"
+        : props.knifeStyle === "Butcher Knife"
         ? "Butcher Knife"
-        : knifeStyle === "Slicing Knife"
+        : props.knifeStyle === "Slicing Knife"
         ? "Slicing Knife"
         : null}
     </h2>

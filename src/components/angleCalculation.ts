@@ -1,4 +1,9 @@
-export default function angleCalculation(knifeStyle, metalType, singleBevel) {
+export default function angleCalculation(
+  knifeStyle: string,
+  metalType: string,
+  singleBevel: string,
+  currentSharpness: string
+) {
   //default angles for knife styles and adjust with metal type and bevel
 
   let angle = 0;

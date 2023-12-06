@@ -15,7 +15,12 @@ export default function SearchResults({
     singleBevel,
     currentSharpness
   );
-  let angle = angleCalculation(knifeStyle, metalType, singleBevel);
+  let angle = angleCalculation(
+    knifeStyle,
+    metalType,
+    singleBevel,
+    currentSharpness
+  );
   return stones[0] != 0 ? (
     <div className="instructions">
       <h3>

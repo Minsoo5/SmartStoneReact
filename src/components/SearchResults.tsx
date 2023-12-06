@@ -1,12 +1,6 @@
 import gritCalculation from "./gritCalculation";
 import angleCalculation from "./angleCalculation";
-
-interface SearchRequest {
-  knifeStyle: string;
-  metalType: string;
-  singleBevel: string;
-  currentSharpness: string;
-}
+import { SearchRequest } from "./objectTypes";
 
 export default function SearchResults({
   searchRequest: { knifeStyle, metalType, singleBevel, currentSharpness },

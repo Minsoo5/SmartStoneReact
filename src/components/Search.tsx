@@ -1,6 +1,6 @@
 import CurrentKnife from "./CurrentKnife";
 import SearchResults from "./SearchResults";
-import { useState, useEffect } from "react";
+import { useState, useEffect, SyntheticEvent } from "react";
 
 const Search = () => {
   const [searchRequest, setSearchRequest] = useState({
@@ -13,14 +13,20 @@ const Search = () => {
   const { knifeStyle, metalType, singleBevel, currentSharpness } =
     searchRequest;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: SyntheticEvent) => {
     e.preventDefault();
-    const formData = new FormData(e.target);
-    const obj = {
-      knifeStyle: formData.get("knifeStyle") ?? "",
-      metalType: formData.get("metalType") ?? "",
-      singleBevel: formData.get("singleBevel") ?? "",
-      currentSharpness: formData.get("currentSharpness") ?? "",
+    const formData = new FormData(e.target as HTMLFormElement);
+
+    const obj: {
+      knifeStyle: string;
+      metalType: string;
+      singleBevel: string;
+      currentSharpness: string;
+    } = {
+      knifeStyle: (formData.get("knifeStyle") as string) ?? "",
+      metalType: (formData.get("metalType") as string) ?? "",
+      singleBevel: (formData.get("singleBevel") as string) ?? "",
+      currentSharpness: (formData.get("currentSharpness") as string) ?? "",
     };
     setSearchRequest(obj);
     // Perform clean up and a fetch?

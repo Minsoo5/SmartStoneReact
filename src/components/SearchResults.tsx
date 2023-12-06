@@ -1,8 +1,17 @@
 import gritCalculation from "./gritCalculation";
 import angleCalculation from "./angleCalculation";
 
+interface SearchRequest {
+  knifeStyle: string;
+  metalType: string;
+  singleBevel: string;
+  currentSharpness: string;
+}
+
 export default function SearchResults({
   searchRequest: { knifeStyle, metalType, singleBevel, currentSharpness },
+}: {
+  searchRequest: SearchRequest;
 }) {
   console.log(knifeStyle); // defined
 
@@ -21,7 +30,7 @@ export default function SearchResults({
           : null}
       </h3>
       <ul>
-        {stones.map((stone) => (
+        {stones.map((stone: string) => (
           <li key={stones.indexOf(stone)}>
             Grit Level:{" "}
             <a

@@ -1,8 +1,6 @@
 import { knifeObject } from "./objectTypes";
 
 const CurrentKnife = (props: knifeObject) => {
-  console.log(props);
-  console.log(props.knifeStyle);
   return (
     <h2>
       {props.knifeStyle !== "" ||

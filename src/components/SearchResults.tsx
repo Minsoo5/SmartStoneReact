@@ -2,24 +2,18 @@ import gritCalculation from "./gritCalculation";
 import angleCalculation from "./angleCalculation";
 import { knifeObject } from "./objectTypes";
 
-export default function SearchResults({
-  searchRequest: { knifeStyle, metalType, singleBevel, currentSharpness },
-}: {
-  searchRequest: knifeObject;
-}) {
-  console.log(knifeStyle); // defined
-
+const SearchResults = (props: knifeObject) => {
   let stones = gritCalculation(
-    knifeStyle,
-    metalType,
-    singleBevel,
-    currentSharpness
+    props.knifeStyle,
+    props.metalType,
+    props.singleBevel,
+    props.currentSharpness
   );
   let angle = angleCalculation(
-    knifeStyle,
-    metalType,
-    singleBevel,
-    currentSharpness
+    props.knifeStyle,
+    props.metalType,
+    props.singleBevel,
+    props.currentSharpness
   );
   return stones[0] != 0 ? (
     <div className="instructions">
@@ -27,9 +21,9 @@ export default function SearchResults({
         Stones to use with an angle of {angle - 1} - {angle + 1} degrees
       </h3>
       <h3>
-        {singleBevel !== "" && singleBevel === "Yes"
+        {props.singleBevel !== "" && props.singleBevel === "Yes"
           ? "On one side only"
-          : singleBevel === "No"
+          : props.singleBevel === "No"
           ? "On both sides"
           : null}
       </h3>
@@ -48,14 +42,16 @@ export default function SearchResults({
         ))}
       </ul>
       <h3>
-        {currentSharpness !== "" && currentSharpness === "Very Dull"
+        {props.currentSharpness !== "" && props.currentSharpness === "Very Dull"
           ? "Time to take off some metal!"
-          : currentSharpness === "Dull"
+          : props.currentSharpness === "Dull"
           ? "You're gonna need some elbow grease!"
-          : currentSharpness === "Almost Sharp"
+          : props.currentSharpness === "Almost Sharp"
           ? "Just a little touch up!"
           : null}
       </h3>
     </div>
   ) : null;
-}
+};
+
+export default SearchResults;

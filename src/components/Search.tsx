@@ -95,7 +95,7 @@ const Search = () => {
 
       <CurrentKnife {...searchRequest} />
 
-      <SearchResults searchRequest={searchRequest} />
+      <SearchResults {...searchRequest} />
     </div>
   );
 };

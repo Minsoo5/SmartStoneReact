@@ -24,6 +24,7 @@ const Search = () => {
     };
     setSearchRequest(obj);
     // Perform clean up and a fetch?
+    // Grit hyperlink place holder
   };
 
   useEffect(() => {

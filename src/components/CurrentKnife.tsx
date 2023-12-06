@@ -1,5 +1,14 @@
+interface SearchRequest {
+  knifeStyle: string;
+  metalType: string;
+  singleBevel: string;
+  currentSharpness: string;
+}
+
 const CurrentKnife = ({
   searchRequest: { knifeStyle, metalType, singleBevel, currentSharpness },
+}: {
+  searchRequest: SearchRequest;
 }) => {
   return (
     <h2>

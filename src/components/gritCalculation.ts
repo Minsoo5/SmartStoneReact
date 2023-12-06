@@ -1,7 +1,8 @@
 export default function gritCalculation(
-  knifeStyle,
-  metalType,
-  currentSharpness
+  knifeStyle: string,
+  metalType: string,
+  singleBevel: string,
+  currentSharpness: string
 ) {
   let maxGrit = 0;
   let minGrit = 0;

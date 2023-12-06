@@ -1,9 +1,9 @@
-import { SearchRequest } from "./objectTypes";
+import { KnifeObject } from "./objectTypes";
 
 const CurrentKnife = ({
   searchRequest: { knifeStyle, metalType, singleBevel, currentSharpness },
 }: {
-  searchRequest: SearchRequest;
+  searchRequest: KnifeObject;
 }) => {
   return (
     <h2>

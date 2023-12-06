@@ -1,11 +1,11 @@
 import gritCalculation from "./gritCalculation";
 import angleCalculation from "./angleCalculation";
-import { KnifeObject } from "./objectTypes";
+import { knifeObject } from "./objectTypes";
 
 export default function SearchResults({
   searchRequest: { knifeStyle, metalType, singleBevel, currentSharpness },
 }: {
-  searchRequest: KnifeObject;
+  searchRequest: knifeObject;
 }) {
   console.log(knifeStyle); // defined
 

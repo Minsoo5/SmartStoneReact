@@ -1,8 +1,8 @@
-interface KnifeObject {
+interface knifeObject {
   knifeStyle: string;
   metalType: string;
   singleBevel: string;
   currentSharpness: string;
 }
 
-export { KnifeObject };
+export { knifeObject };

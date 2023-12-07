@@ -7,6 +7,8 @@ export default function gritCalculation(
   let maxGrit = 0;
   let minGrit = 0;
 
+  // Setting default min amd max grits for each Knife style. A Butcher knife won't ever need to be as sharp as a slicer.
+
   switch (knifeStyle) {
     case "Chef Knife":
       maxGrit = 3.0;
@@ -37,6 +39,9 @@ export default function gritCalculation(
       maxGrit += 1.0;
       break;
   }
+
+  // The duller the knife, the more metal we need to shave off to start the sharpening process
+  // which in turn requires a courser stone to make the process easier.
 
   switch (currentSharpness) {
     case "Very Dull":

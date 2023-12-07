@@ -7,6 +7,8 @@ const CurrentKnife = (props: knifeObject) => {
     props.singleBevel === "Yes" ? "Single Bevel" : "Double Bevel"
   }`;
 
+  // Display the current knife ONLY if ALL the fields are present.
+
   return props.currentSharpness !== "" &&
     props.knifeStyle !== "" &&
     props.metalType !== "" &&

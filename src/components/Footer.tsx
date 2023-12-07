@@ -1,5 +1,3 @@
-import knifeIcon from "../assets/knife_icon.png";
-
 const Footer = () => {
   return (
     <div className="footer">

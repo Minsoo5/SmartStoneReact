@@ -21,6 +21,8 @@ export default function angleCalculation(
       break;
   }
 
+  // Higher carbon alloys can hold a "sharper" angle
+
   switch (metalType) {
     case "High Carbon":
       angle -= 1;
